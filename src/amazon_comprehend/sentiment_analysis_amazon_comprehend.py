@@ -64,8 +64,8 @@ if __name__ == "__main__":
         sys.exit()
 
     # Get the AWS Lambda client which will invoke the AWS Lambda function
-    lambda_client = boto3.client('lambda', region_name='us-east-1', aws_access_key_id='AKIA3ERQM2CPM4LDIHIU',
-        aws_secret_access_key='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')
+    lambda_client = boto3.client('lambda', region_name='us-east-1', aws_access_key_id='',
+        aws_secret_access_key='')
 
     # Open file which contains positive and negative tweets
     if remove_smileys:
