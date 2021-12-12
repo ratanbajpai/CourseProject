@@ -20,16 +20,16 @@ For some environments if the NLTK installation does not contain all the packages
 
 $ python3
 
--> import nltk
+\>>> import nltk
  
--> nltk.download('twitter_samples')
+\>>> nltk.download('twitter_samples')
  
--> nltk.download('stopwords')
+\>>> nltk.download('stopwords')
  
--> nltk.download('averaged_perceptron_tagger')
+\>>> nltk.download('averaged_perceptron_tagger')
  
--> nltk.download('wordnet')
+\>>> nltk.download('wordnet')
 
--> exit()
+\>>> exit()
 
 After the above steps, the "sentiment_analysis_nltk.py" script should work fine.
