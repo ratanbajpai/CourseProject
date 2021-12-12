@@ -14,3 +14,22 @@ Similar to Amazon Comprehend the source, data, setup & run video, and presentati
 
 The description of the software as well as detailed steps in each of the above approaches are described in the ProjectFinalReport.pdf which is in the doc folder. This report also contains the sentiment analysis results and conclusions for both approaches. Since the setup for running the NLTK part is fairly easy, it's recommended to run this part and see the results. The setup for Amazon Comprehend is more involved and may also cost money if the free AWS tier is not available. It's therefore recommended to see how this approach works and the results of a run in the setup video itself.
 
+## NLTK Installation
+
+For some environments if the NLTK installation does not contain all the packages, please follow the instructions below. These are in addition to the instructions in the video and the slides. Also there is a minor correction to what is mentioned in the video (nltk needs to be imported before running its commands). After installing NLTK using the PIP package manager, you may need to install the following packages. NLTK steps are to be executed at the python prompt.
+
+$ python3
+
+-> import nltk
+ 
+-> nltk.download('twitter_samples')
+ 
+-> nltk.download('stopwords')
+ 
+-> nltk.download('averaged_perceptron_tagger')
+ 
+-> nltk.download('wordnet')
+
+-> exit()
+
+After the above steps, the "sentiment_analysis_nltk.py" script should work fine.
