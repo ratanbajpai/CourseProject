@@ -6,6 +6,16 @@ import nltk
 from nltk.corpus import twitter_samples
 import re
 
+positive_emojis = [':-)', ':)', ';)', ':o)', ':]', ':3', ':c)', ':>', '=]', '8)', '=)', ':}',
+    ':^)', ':-D', ':D', '8-D', '8D', 'x-D', 'xD', 'X-D', 'XD', '=-D', '=D',
+    '=-3', '=3', ':-))', ":'-)", ":')", ':*', ':^*', '>:P', ':-P', ':P', 'X-P',
+    'x-p', 'xp', 'XP', ':-p', ':p', '=p', ':-b', ':b', '>:)', '>;)', '>:-)',
+    '<3']
+
+negative_emojis = [':L', ':-/', '>:/', ':S', '>:[', ':@', ':-(', ':[', ':-||', '=L', ':<',
+    ':-[', ':-<', '=\\', '=/', '>:(', ':(', '>.<', ":'-(", ":'(", ':\\', ':-c',
+    ':c', ':{', '>:\\', ';(']
+
 def save_tweets_data(tweets_data, file_name, remove_smileys):
         with open(file_name, 'w') as f:
             # We just need to save the last 1250 rows as test data
@@ -14,10 +24,14 @@ def save_tweets_data(tweets_data, file_name, remove_smileys):
                 # If we don't need smileys, remove them
                 if remove_smileys:
                     # Remove puntuations
-                    token = re.sub('[()!?]', "", token)
-                    token = re.sub('\[.*?\]', "", token)
+                    for item in positive_emojis:
+                        token = token.replace(item, '')
+                    for item in negative_emojis:
+                        token = token.replace(item, '')
+                    # token = re.sub('[()!?]', "", token)
+                    # token = re.sub('\[.*?\]', "", token)
                     # Remove alpha-numeric characters
-                    token = re.sub("[^a-z0-9]", "", token)
+                    # token = re.sub("[^a-z0-9]", "", token)
                 f.write("%s\n" % token)
 
 

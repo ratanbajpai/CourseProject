@@ -69,8 +69,8 @@ if __name__ == "__main__":
 
     # Open file which contains positive and negative tweets
     if remove_smileys:
-        positive_tweets_file = open('../../data/amazon_comprehend/amz_positive_tweets_smiley_removed.txt', 'r')
-        negative_tweets_file = open('../../data/amazon_comprehend/amz_negative_tweets_smiley_removed.txt', 'r')
+        positive_tweets_file = open('../../data/amazon_comprehend/amz_adj_positive_tweets.txt', 'r')
+        negative_tweets_file = open('../../data/amazon_comprehend/amz_adj_negative_tweets.txt', 'r')
     else:
         positive_tweets_file = open('../../data/amazon_comprehend/amz_positive_tweets.txt', 'r')
         negative_tweets_file = open('../../data/amazon_comprehend/amz_negative_tweets.txt', 'r')
