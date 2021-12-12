@@ -8,7 +8,7 @@ The source for Amazon Comprehend is in src/amazon_comprehend and data is in data
 
 ## Natural Language Toolkit (NLTK)
 
-Similar to Amazon Comprehend the source, data, setup & run video, and presentation for NLTK are in src/nltk, data/nltk and the doc folder. The setup for NLTK is relatively easier.
+Similar to Amazon Comprehend the source, data, setup & run video, and presentation for NLTK are in src/nltk, data/nltk and the doc folder. The setup for NLTK is relatively easier. There is a Jupyter Notebook also provided in the src/nltk directory to see and run the individual processing steps in the NLTK approach.
 
 ## Comparing Both Approaches
 
