@@ -4,6 +4,10 @@
 # negative tweets, which will be used to train a model. Once the model is trained, the sentiment analysis task will
 # be performed on the test data.
 
+# This part of the code is guided by an online tutorial which was suitably
+# modified to fit the needs and improve processing.
+# (https://www.digitalocean.com/community/tutorials/how-to-perform-sentiment-analysis-in-python-3-using-the-natural-language-toolkit-nltk)
+
 # NLTK, twitter_samples and other imports
 import nltk
 from nltk.corpus import twitter_samples
